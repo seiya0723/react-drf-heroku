@@ -138,6 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+
 if not DEBUG:
 
     # ALLOWED_HOSTSにホスト名)を入力
