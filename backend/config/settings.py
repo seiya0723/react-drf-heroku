@@ -139,10 +139,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if not DEBUG:
 
-    #INSTALLED_APPSにcloudinaryの追加
-    INSTALLED_APPS.append('cloudinary')
-    INSTALLED_APPS.append('cloudinary_storage')
-
     # ALLOWED_HOSTSにホスト名)を入力
     ALLOWED_HOSTS = [ os.environ["HOST"] ]
 
@@ -171,6 +167,7 @@ if not DEBUG:
     STATIC_ROOT = BASE_DIR / 'static'
 
     # DBの設定
+    """
     DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -187,5 +184,6 @@ if not DEBUG:
 
     db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
     DATABASES['default'].update(db_from_env)
+    """
 
 
